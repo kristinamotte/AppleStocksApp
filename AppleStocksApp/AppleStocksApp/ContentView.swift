@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var searchTearm: String = ""
+    @ObservedObject private var stockListViewModel = StockListViewModel()
     
     init() {
         UINavigationBar.appearance().backgroundColor = .black
         UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         UITableView.appearance().backgroundColor = .black
-        UITableViewCell.appearance().backgroundColor = .black
+        stockListViewModel.fetchStocks()
     }
     
     var body: some View {
@@ -28,9 +28,9 @@ struct ContentView: View {
                         .fontWeight(.bold)
                         .padding(EdgeInsets(top: 8, leading: 16, bottom: 0, trailing: 0))
                     
-                    SearchView(searchItem: $searchTearm)
-                        .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
-                    Spacer()
+                    SearchView(searchItem: $stockListViewModel.searchTerm)
+                        .padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
+                    StockListView(stocks: stockListViewModel.stocks)
                 }
             }
             

@@ -16,6 +16,8 @@
 		2BAFE28F25A62B6500A57C40 /* StockListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFE28E25A62B6500A57C40 /* StockListViewModel.swift */; };
 		2BAFE29325A62C5F00A57C40 /* StockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFE29225A62C5F00A57C40 /* StockViewModel.swift */; };
 		2BAFE29725A6335200A57C40 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFE29625A6335200A57C40 /* SearchView.swift */; };
+		2BAFE29A25A63C3700A57C40 /* PlaceholderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFE29925A63C3700A57C40 /* PlaceholderTextField.swift */; };
+		2BAFE29D25A63E0800A57C40 /* StockListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFE29C25A63E0800A57C40 /* StockListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		2BAFE28E25A62B6500A57C40 /* StockListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListViewModel.swift; sourceTree = "<group>"; };
 		2BAFE29225A62C5F00A57C40 /* StockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockViewModel.swift; sourceTree = "<group>"; };
 		2BAFE29625A6335200A57C40 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		2BAFE29925A63C3700A57C40 /* PlaceholderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderTextField.swift; sourceTree = "<group>"; };
+		2BAFE29C25A63E0800A57C40 /* StockListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				2BAFE29625A6335200A57C40 /* SearchView.swift */,
+				2BAFE29925A63C3700A57C40 /* PlaceholderTextField.swift */,
+				2BAFE29C25A63E0800A57C40 /* StockListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -186,10 +192,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BAFE28425A627F700A57C40 /* WebService.swift in Sources */,
+				2BAFE29A25A63C3700A57C40 /* PlaceholderTextField.swift in Sources */,
 				2BAFE27525A502AE00A57C40 /* ContentView.swift in Sources */,
 				2BAFE28925A628F000A57C40 /* Stock.swift in Sources */,
 				2BAFE29725A6335200A57C40 /* SearchView.swift in Sources */,
 				2BAFE29325A62C5F00A57C40 /* StockViewModel.swift in Sources */,
+				2BAFE29D25A63E0800A57C40 /* StockListView.swift in Sources */,
 				2BAFE27325A502AE00A57C40 /* AppleStocksAppApp.swift in Sources */,
 				2BAFE28F25A62B6500A57C40 /* StockListViewModel.swift in Sources */,
 			);

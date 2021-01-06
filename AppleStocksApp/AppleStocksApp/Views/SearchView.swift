@@ -14,15 +14,15 @@ struct SearchView: View {
             Spacer()
             Image(systemName: "magnifyingglass")
                 .padding(EdgeInsets(top: 0, leading: 12, bottom: 0, trailing: 0))
-            TextField("Search", text: $searchItem)
+            PlaceholderTextField(placeholder: Text("Search").foregroundColor(.gray), text: $searchItem)
+        
             
             Spacer()
         }
         .foregroundColor(.gray)
-        .frame(height: 60)
+        .frame(height: 48)
         .background(Color(.darkGray))
         .cornerRadius(10)
-        .padding(10)
     }
 }
 
