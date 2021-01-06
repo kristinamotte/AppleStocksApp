@@ -40,7 +40,7 @@ struct StockCellView: View {
                 Spacer()
                 
                 VStack(alignment: .trailing) {
-                    Text(stock.price)
+                    Text("$" + stock.price)
                         .font(.custom("Arial", size: 22))
                         .foregroundColor(.white)
                     Button(stock.change) {
