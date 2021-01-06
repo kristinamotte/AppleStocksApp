@@ -15,7 +15,7 @@ final class WebService: StocksService {
     static let shared = WebService()
     
     func getStocks(completion: @escaping ([Stock]?) -> Void) {
-        guard let url = URL(string: "https://island-bramble.glitch.me/stocks") else {
+        guard let url = URL(string: "https://even-roasted-bike.glitch.me/stocks") else {
             completion(nil)
             return
         }
