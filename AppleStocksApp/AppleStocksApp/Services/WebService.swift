@@ -7,28 +7,28 @@
 
 import Foundation
 
-class WebService {
+protocol StocksService {
+    func getStocks(completion: @escaping ([Stock]?) -> Void)
+}
+
+final class WebService: StocksService {
+    static let shared = WebService()
+    
     func getStocks(completion: @escaping ([Stock]?) -> Void) {
         guard let url = URL(string: "https://island-bramble.glitch.me/stocks") else {
-            DispatchQueue.main.async {
-                completion(nil)
-            }
+            completion(nil)
             return
         }
         
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let data = data, error == nil else {
-                DispatchQueue.main.async {
-                    completion(nil)
-                }
+                completion(nil)
                 return
             }
             
             let stocks = try? JSONDecoder().decode([Stock].self, from: data)
             
-            DispatchQueue.main.async {
-                completion(stocks)
-            }
+            completion(stocks)
         }.resume()
     }
 }
