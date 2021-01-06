@@ -13,6 +13,8 @@
 		2BAFE27A25A502B000A57C40 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BAFE27925A502B000A57C40 /* Preview Assets.xcassets */; };
 		2BAFE28425A627F700A57C40 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFE28325A627F700A57C40 /* WebService.swift */; };
 		2BAFE28925A628F000A57C40 /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFE28825A628F000A57C40 /* Stock.swift */; };
+		2BAFE28F25A62B6500A57C40 /* StockListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFE28E25A62B6500A57C40 /* StockListViewModel.swift */; };
+		2BAFE29325A62C5F00A57C40 /* StockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFE29225A62C5F00A57C40 /* StockViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		2BAFE27B25A502B000A57C40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BAFE28325A627F700A57C40 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		2BAFE28825A628F000A57C40 /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
+		2BAFE28E25A62B6500A57C40 /* StockListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListViewModel.swift; sourceTree = "<group>"; };
+		2BAFE29225A62C5F00A57C40 /* StockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		2BAFE27125A502AE00A57C40 /* AppleStocksApp */ = {
 			isa = PBXGroup;
 			children = (
+				2BAFE28D25A62B2D00A57C40 /* ViewModels */,
 				2BAFE28725A628E700A57C40 /* Models */,
 				2BAFE27225A502AE00A57C40 /* AppleStocksAppApp.swift */,
 				2BAFE27425A502AE00A57C40 /* ContentView.swift */,
@@ -89,6 +94,15 @@
 				2BAFE28825A628F000A57C40 /* Stock.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		2BAFE28D25A62B2D00A57C40 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				2BAFE28E25A62B6500A57C40 /* StockListViewModel.swift */,
+				2BAFE29225A62C5F00A57C40 /* StockViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,7 +177,9 @@
 				2BAFE28425A627F700A57C40 /* WebService.swift in Sources */,
 				2BAFE27525A502AE00A57C40 /* ContentView.swift in Sources */,
 				2BAFE28925A628F000A57C40 /* Stock.swift in Sources */,
+				2BAFE29325A62C5F00A57C40 /* StockViewModel.swift in Sources */,
 				2BAFE27325A502AE00A57C40 /* AppleStocksAppApp.swift in Sources */,
+				2BAFE28F25A62B6500A57C40 /* StockListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
