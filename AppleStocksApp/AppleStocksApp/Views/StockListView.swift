@@ -36,9 +36,7 @@ struct StockCellView: View {
                         .font(.custom("Arial", size: 18))
                         .foregroundColor(.gray)
                 }
-                
                 Spacer()
-                
                 VStack(alignment: .trailing) {
                     Text("$" + stock.price)
                         .font(.custom("Arial", size: 22))
@@ -51,7 +49,6 @@ struct StockCellView: View {
                     .background(Color.red)
                     .foregroundColor(.white)
                     .cornerRadius(6)
-                    
                 }
             }
         }
