@@ -15,6 +15,7 @@ struct ContentView: View {
         UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         UITableView.appearance().backgroundColor = .black
         stockListViewModel.fetchStocks()
+        stockListViewModel.fetchNews()
     }
     
     var body: some View {

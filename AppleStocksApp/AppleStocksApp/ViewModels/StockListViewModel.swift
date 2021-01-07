@@ -12,15 +12,21 @@ class StockListViewModel: ObservableObject {
     @Published var stocks: [StockViewModel] = []
     
     // MARK: Services
-    let stocksService: StocksService = WebService.shared
+    let webService: StocksService & TopNewsService = WebService.shared
     
     func fetchStocks() {
-        stocksService.getStocks { (stocks) in
+        webService.getStocks { (stocks) in
             if let stocks = stocks {
                 DispatchQueue.main.async {
                     self.stocks = stocks.map(StockViewModel.init)
                 }
             }
+        }
+    }
+    
+    func fetchNews() {
+        webService.getTopNews { (atricles) in
+            print(atricles)
         }
     }
 }
