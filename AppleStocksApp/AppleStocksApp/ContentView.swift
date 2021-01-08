@@ -14,8 +14,7 @@ struct ContentView: View {
         UINavigationBar.appearance().backgroundColor = .black
         UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         UITableView.appearance().backgroundColor = .black
-        stockListViewModel.fetchStocks()
-        stockListViewModel.fetchNews()
+        stockListViewModel.loadData()
     }
     
     var body: some View {
@@ -34,6 +33,11 @@ struct ContentView: View {
                     SearchView(searchItem: $stockListViewModel.searchTerm)
                         .padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
                     StockListView(stocks: filteredStocks)
+                        
+                    NewsArticleView(news: stockListViewModel.articles)
+                        .padding(.bottom)
+                        .frame(width: 400.0, height: 150.0)
+                        .offset(y: UIScreen.main.bounds.height / 2.5)
                 }
             }
             

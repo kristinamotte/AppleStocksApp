@@ -10,23 +10,29 @@ import Foundation
 class StockListViewModel: ObservableObject {
     @Published var searchTerm: String = ""
     @Published var stocks: [StockViewModel] = []
+    @Published var articles: [NewsArticleViewModel] = []
     
     // MARK: Services
     let webService: StocksService & TopNewsService = WebService.shared
     
-    func fetchStocks() {
+    func loadData() {
+        fetchStocks()
+        fetchNews()
+    }
+    
+    private func fetchStocks() {
         webService.getStocks { (stocks) in
             if let stocks = stocks {
-                DispatchQueue.main.async {
-                    self.stocks = stocks.map(StockViewModel.init)
-                }
+                self.stocks = stocks.map(StockViewModel.init)
             }
         }
     }
     
-    func fetchNews() {
+    private func fetchNews() {
         webService.getTopNews { (atricles) in
-            print(atricles)
+            if let atricles = atricles {
+                self.articles = atricles.map(NewsArticleViewModel.init)
+            }
         }
     }
 }

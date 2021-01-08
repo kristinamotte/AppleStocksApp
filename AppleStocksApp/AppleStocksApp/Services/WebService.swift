@@ -32,25 +32,33 @@ final class WebService: StocksService, TopNewsService {
     
     func getStocks(completion: @escaping ([Stock]?) -> Void) {
         guard let url = URL(string: Config.URLs.stocksURL) else {
-            completion(nil)
+            DispatchQueue.main.async {
+                completion(nil)
+            }
             return
         }
         
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let data = data, error == nil else {
-                completion(nil)
+                DispatchQueue.main.async {
+                    completion(nil)
+                }
                 return
             }
             
             let stocks = try? JSONDecoder().decode([Stock].self, from: data)
             
-            completion(stocks)
+            DispatchQueue.main.async {
+                completion(stocks)
+            }
         }.resume()
     }
     
     func getTopNews(completion: @escaping ([Article]?) -> Void) {
         guard let url = URL(string: Config.URLs.topNewsURL) else {
-            completion(nil)
+            DispatchQueue.main.async {
+                completion(nil)
+            }
             return
         }
         
@@ -58,13 +66,17 @@ final class WebService: StocksService, TopNewsService {
         
         URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
             guard let data = data, error == nil else {
-                completion(nil)
+                DispatchQueue.main.async {
+                    completion(nil)
+                }
                 return
             }
             
             let topNews = try? JSONDecoder().decode(NewsResponse.self, from: data).articles
             
-            completion(topNews)
+            DispatchQueue.main.async {
+                completion(topNews)
+            }
         }.resume()
     }
 }
