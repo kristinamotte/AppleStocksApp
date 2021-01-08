@@ -44,6 +44,6 @@ struct NewsArticleView: View {
 
 struct NewsArticleView_Previews: PreviewProvider {
     static var previews: some View {
-        NewsArticleView(news: [NewsArticleViewModel(article: Article(title: "Test title", description: "An expanded first round is highlighted by a few tough matchups, including Colts-Bills and Ravens-Titans.", urlToImage: "https://static01.nyt.com/images/2021/01/07/sports/07nfl-matchups-ravenstop/07nfl-matchups-ravenstop-facebookJumbo.jpg"))])
+        NewsArticleView(news: [NewsArticleViewModel(article: Article(source: Source(id: nil, name: "CNN"), title: "Test title", urlToImage: "https://static01.nyt.com/images/2021/01/07/sports/07nfl-matchups-ravenstop/07nfl-matchups-ravenstop-facebookJumbo.jpg"))])
     }
 }

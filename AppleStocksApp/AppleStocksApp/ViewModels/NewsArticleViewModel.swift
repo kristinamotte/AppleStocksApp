@@ -18,7 +18,7 @@ struct NewsArticleViewModel {
         return article.title
     }
     
-    var description: String {
-        return article.description
+    var publisher: String {
+        return article.source.name.uppercased()
     }
 }
