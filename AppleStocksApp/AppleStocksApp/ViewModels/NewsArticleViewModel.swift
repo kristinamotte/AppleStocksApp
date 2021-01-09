@@ -11,14 +11,18 @@ struct NewsArticleViewModel {
     let article: Article
     
     var imageURL: String {
-        return article.urlToImage
+        return article.urlToImage ?? ""
     }
     
     var title: String {
-        return article.title
+        return article.title ?? ""
     }
     
-    var publisher: String {
-        return article.source.name.uppercased()
+    var publisher: String? {
+        return article.source?.name?.uppercased()
+    }
+    
+    var author: String {
+        return article.description ?? ""
     }
 }

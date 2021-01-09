@@ -5,9 +5,10 @@
 //  Created by Kristina Motte on 1/6/21.
 //
 
-import Foundation
+import SwiftUI
 
 class StockListViewModel: ObservableObject {
+    @Published var dragOffset: CGSize = CGSize(width: 0, height: UIScreen.main.bounds.height / 1.9)
     @Published var searchTerm: String = ""
     @Published var stocks: [StockViewModel] = []
     @Published var articles: [NewsArticleViewModel] = []

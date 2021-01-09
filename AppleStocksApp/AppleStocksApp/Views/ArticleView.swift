@@ -13,11 +13,13 @@ struct ArticleView: View {
     var body: some View {
         HStack(alignment: .top) {
             VStack(alignment: .leading) {
-                Text(article.publisher)
-                    .foregroundColor(.white)
-                    .font(.custom("Arial", size: 22))
-                    .bold()
-                    .padding([.bottom], 2)
+                if let publisher = article.publisher {
+                    Text(publisher)
+                        .foregroundColor(.white)
+                        .font(.custom("Arial", size: 22))
+                        .bold()
+                        .padding([.bottom], 2)
+                }
                 Text(article.title)
                     .foregroundColor(.gray)
                     .font(.custom("Arial", size: 20))
@@ -34,6 +36,6 @@ struct ArticleView: View {
 
 struct ArticleView_Previews: PreviewProvider {
     static var previews: some View {
-        ArticleView(article: NewsArticleViewModel(article: Article(source: Source(id: nil, name: "CNN"), title: "Test", urlToImage: "https://static01.nyt.com/images/2021/01/07/sports/07nfl-matchups-ravenstop/07nfl-matchups-ravenstop-facebookJumbo.jpg")))
+        ArticleView(article: NewsArticleViewModel(article: Article(source: Source(id: nil, name: "CNN"), title: "Test", urlToImage: "https://static01.nyt.com/images/2021/01/07/sports/07nfl-matchups-ravenstop/07nfl-matchups-ravenstop-facebookJumbo.jpg", url: "https://static01.nyt.com/images/2021/01/07/sports/07nfl-matchups-ravenstop/07nfl-matchups-ravenstop-facebookJumbo.jpg", publishedAt: "", author: "", description: "", content: "")))
     }
 }
