@@ -32,7 +32,7 @@ struct ContentView: View {
                         .foregroundColor(.gray)
                         .font(.custom("Arial", size: 32))
                         .fontWeight(.bold)
-                        .padding(EdgeInsets(top: 2, leading: 16, bottom: 0, trailing: 0))
+                        .padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 0))
                     
                     SearchView(searchItem: $stockListViewModel.searchTerm)
                         .padding(EdgeInsets(top: 0, leading: 16, bottom: 16, trailing: 16))

@@ -21,7 +21,7 @@ struct SearchView: View {
         }
         .foregroundColor(.gray)
         .frame(height: 48)
-        .background(Color(.darkGray))
+        .background(Color(red: 27/255, green: 28/255, blue: 30/255))
         .cornerRadius(10)
     }
 }
